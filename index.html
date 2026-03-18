@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simpletics Hair | Premium Haircare</title>
+  <meta name="description" content="Premium hair products for texture, hold and style." />
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1268866321412368');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1268866321412368&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f8fb;
+      color: #111;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .announcement {
+      background: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .navbar {
+      background: white;
+      border-bottom: 1px solid #e8e8e8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .shop-btn {
+      background: #111;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      align-items: center;
+      padding: 70px 60px;
+      background:
+        radial-gradient(circle at bottom left, #76a9ff 0%, rgba(118,169,255,0.15) 30%, transparent 50%),
+        linear-gradient(135deg, #02142f 0%, #062e63 55%, #8bb8ff 100%);
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      max-width: 620px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .hero h1 {
+      font-size: 68px;
+      line-height: 0.95;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 30px;
+      max-width: 520px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .primary-btn {
+      background: #3b82f6;
+      color: white;
+      padding: 16px 24px;
+      border-radius: 12px;
+      font-weight: 800;
+      display: inline-block;
+    }
+
+    .secondary-btn {
+      background: rgba(255,255,255,0.12);
+      color: white;
+      padding: 16px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.25);
+      display: inline-block;
+    }
+
+    .hero-note {
+      font-size: 14px;
+      color: rgba(255,255,255,0.85);
+      margin-top: 10px;
+    }
+
+    .hero-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      min-height: 500px;
+    }
+
+    .product-stack {
+      position: relative;
+      width: 430px;
+      height: 430px;
+    }
+
+    .box {
+      position: absolute;
+      background: linear-gradient(180deg, #8db5ff 0%, #4c82e8 100%);
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+
+    .box-1 {
+      width: 130px;
+      height: 110px;
+      bottom: 30px;
+      left: 40px;
+    }
+
+    .box-2 {
+      width: 150px;
+      height: 170px;
+      bottom: 30px;
+      left: 150px;
+    }
+
+    .box-3 {
+      width: 190px;
+      height: 250px;
+      bottom: 30px;
+      left: 230px;
+    }
+
+    .spray {
+      position: absolute;
+      width: 90px;
+      height: 250px;
+      background: white;
+      border-radius: 45px 45px 25px 25px;
+      left: 140px;
+      top: 55px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    .spray:before {
+      content: "";
+      position: absolute;
+      top: -28px;
+      left: 26px;
+      width: 38px;
+      height: 40px;
+      border-radius: 12px 12px 4px 4px;
+      background: #f5f5f5;
+    }
+
+    .spray-label {
+      position: absolute;
+      left: 28px;
+      top: 92px;
+      transform: rotate(90deg);
+      font-weight: 800;
+      font-size: 18px;
+      color: #444;
+      letter-spacing: 1px;
+    }
+
+    .tube {
+      position: absolute;
+      width: 95px;
+      height: 270px;
+      background: #f9f9f9;
+      border-radius: 45px;
+      left: 225px;
+      top: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    .tube-label {
+      position: absolute;
+      left: 22px;
+      top: 100px;
+      transform: rotate(90deg);
+      font-weight: 800;
+      font-size: 18px;
+      color: #666;
+      letter-spacing: 1px;
+    }
+
+    .jar {
+      position: absolute;
+      width: 185px;
+      height: 95px;
+      background: #f8f8f8;
+      border-radius: 24px 24px 34px 34px;
+      left: 220px;
+      top: 135px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    .jar:before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      left: 10px;
+      width: 165px;
+      height: 26px;
+      border-radius: 18px;
+      background: #efefef;
+    }
+
+    .jar-label {
+      position: absolute;
+      left: 34px;
+      top: 36px;
+      font-weight: 800;
+      font-size: 22px;
+      color: #444;
+    }
+
+    .trust-bar {
+      background: #1b1d24;
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      padding: 20px 30px;
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .section {
+      padding: 70px 50px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 48px;
+      letter-spacing: -1px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #555;
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1250px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      border: 1px solid #ececec;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+    }
+
+    .product-image {
+      height: 250px;
+      border-radius: 18px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #f4f7ff 0%, #d7e5ff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mini-spray,
+    .mini-tube,
+    .mini-jar {
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      position: relative;
+    }
+
+    .mini-spray {
+      width: 74px;
+      height: 170px;
+      border-radius: 36px 36px 20px 20px;
+    }
+
+    .mini-spray:before {
+      content: "";
+      position: absolute;
+      top: -22px;
+      left: 20px;
+      width: 34px;
+      height: 30px;
+      border-radius: 8px 8px 3px 3px;
+      background: #f3f3f3;
+    }
+
+    .mini-tube {
+      width: 78px;
+      height: 185px;
+      border-radius: 36px;
+    }
+
+    .mini-jar {
+      width: 135px;
+      height: 78px;
+      border-radius: 18px 18px 28px 28px;
+    }
+
+    .mini-jar:before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 8px;
+      width: 119px;
+      height: 18px;
+      border-radius: 14px;
+      background: #efefef;
+    }
+
+    .product-card h3 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    .product-card p {
+      color: #555;
+      margin-bottom: 18px;
+      min-height: 72px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .product-btn {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-weight: 800;
+    }
+
+    .footer {
+      background: #111;
+      color: rgba(255,255,255,0.85);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 1100px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 30px;
+        gap: 40px;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-bar {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        padding: 18px 20px;
+      }
+
+      .brand {
+        font-size: 28px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .section {
+        padding: 55px 20px;
+      }
+
+      .section-title {
+        font-size: 36px;
+      }
+
+      .trust-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .product-stack {
+        transform: scale(0.85);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announcement">
+    Free shipping on orders over $35
+  </div>
+
+  <nav class="navbar">
+    <div class="brand">Simpletics</div>
+
+    <div class="nav-links">
+      <a href="#products">Sea Salt Spray</a>
+      <a href="#products">Matte Clay</a>
+      <a href="#products">Pomade</a>
+      <a href="#products">Reviews</a>
+      <a href="#products">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <a class="shop-btn" href="#products">SHOP ALL</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-badge">Premium haircare for daily styling</div>
+      <h1>Premium Haircare,<br>Without The BS</h1>
+      <p>
+        High-performance styling products built for texture, hold and clean everyday looks.
+        Premium feel, simple routine, real results.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="primary-btn" href="#products">SHOP NOW</a>
+        <a class="secondary-btn" href="#products">VIEW PRODUCTS</a>
+      </div>
+
+      <div class="hero-note">
+        2–5 day shipping | Premium formula | Easy returns
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="product-stack">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+
+        <div class="spray">
+          <div class="spray-label">Simpletics</div>
+        </div>
+
+        <div class="tube">
+          <div class="tube-label">Simpletics</div>
+        </div>
+
+        <div class="jar">
+          <div class="jar-label">Simpletics</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-bar">
+    <div>Fast Shipping</div>
+    <div>Premium Formulas</div>
+    <div>Easy Returns</div>
+    <div>Trusted Daily Styling</div>
+  </div>
+
+  <section class="section" id="products">
+    <h2 class="section-title">Experience the evolution of hair care.</h2>
+    <p class="section-subtitle">
+      Three premium essentials built for volume, texture and all-day style.
+      Perfect for testing product page tracking, view content flows and later custom conversions.
+    </p>
+
+    <div class="products">
+      <div class="product-card">
+        <div class="product-image">
+          <div class="mini-spray"></div>
+        </div>
+        <h3>Sea Salt Spray</h3>
+        <p>
+          Lightweight texturizing spray for effortless volume, beach texture and a natural finish.
+        </p>
+        <div class="price">$24</div>
+        <a class="product-btn" href="product-spray.html">View Product</a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <div class="mini-tube"></div>
+        </div>
+        <h3>Matte Clay</h3>
+        <p>
+          Strong hold with a dry matte finish for structured styles that stay clean all day.
+        </p>
+        <div class="price">$26</div>
+        <a class="product-btn" href="product-clay.html">View Product</a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <div class="mini-jar"></div>
+        </div>
+        <h3>Pomade</h3>
+        <p>
+          Smooth control and flexible shine for slicker looks, classic styling and reworkable hold.
+        </p>
+        <div class="price">$25</div>
+        <a class="product-btn" href="product-pomade.html">View Product</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    Test store for Meta Pixel and custom conversion practice.
+  </footer>
+
+</body>
+</html>
