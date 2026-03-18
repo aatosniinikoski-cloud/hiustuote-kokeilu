@@ -19,6 +19,13 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 
 fbq('init', '1551587532608367');
 fbq('track', 'PageView');
+
+fbq('track', 'ViewContent', {
+content_name: 'Sea Salt Spray',
+content_category: 'Hair Product',
+value: 24,
+currency: 'USD'
+});
 </script>
 
 <style>
@@ -66,8 +73,8 @@ color:white;
 padding:16px 28px;
 border-radius:10px;
 font-weight:700;
-display:inline-block;
 cursor:pointer;
+border:none;
 }
 
 .back{
@@ -96,7 +103,7 @@ volyymia ja luonnollisen beach lookin.
 
 <h2>Haluatko ostaa?</h2>
 
-<button class="buy-btn">
+<button class="buy-btn" onclick="addToCart()">
 OSTA
 </button>
 
@@ -107,6 +114,22 @@ OSTA
 </a>
 
 </div>
+
+<script>
+
+function addToCart(){
+
+fbq('track', 'AddToCart', {
+content_name: 'Sea Salt Spray',
+value: 24,
+currency: 'USD'
+});
+
+alert("Tuote lisätty ostoskoriin (demo)");
+
+}
+
+</script>
 
 </body>
 </html>
